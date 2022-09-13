@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Text;
 
 class Program
 {
     static public void Main(string[] args)
     {
-        string text = "20000000000000000000";
+        string text = "2147483646";
         int result = MyAtoi(text);
         Console.WriteLine(result);
         Console.Read();
@@ -12,55 +13,80 @@ class Program
 
     public static int MyAtoi(string s)
     {
-        s = s.Trim();
-        bool isNumberNegative = false;
-        int zero = default(int);
-        long number = zero;
-        int ten = 10;
+        var isNumStarted = false;
+        var isNegative = false;
+        var result = 0;
 
-        if (string.IsNullOrEmpty(s))
-            return zero;
-
-        if (s[zero] is '-')
+        var c = 0;
+        while (c++ < s.Length)
         {
-            isNumberNegative = true;
-            s = s.Remove(zero, 1);
-            if (string.IsNullOrEmpty(s) || s.Any(x => x == '+') || s.Any(x => x == '-'))
-                return zero;
-        }
+            var ch = s[c - 1];
+            if (ch == ' ' && !isNumStarted)
+                continue;
 
-        if (s[zero] is '+')
-        {
-            s = s.Remove(zero, 1);
-            if (string.IsNullOrEmpty(s) || s.Any(x => x == '+') || s.Any(x => x == '-'))
-                return zero;
-        }
-
-
-        if (!char.IsDigit(s[zero]) && s[zero] != '-')
-            return default(int);
-
-        foreach (char c in s)
-            if (char.IsDigit(c) && number <= Int32.MaxValue)
+            if (ch == '0' && !isNumStarted)
             {
-                number += (int)char.GetNumericValue(c);
-                number *= ten;
+                isNumStarted = true;
+                continue;
             }
-            /*else if (char.IsPunctuation(c))
-                break;*/
+
+            if (ch == '-' && !isNumStarted)
+            {
+                isNumStarted = true;
+                isNegative = true;
+                continue;
+            }
+
+            if (ch == '+' && !isNumStarted)
+            {
+                isNumStarted = true;
+                continue;
+            }
+
+            if (
+                ch == '0' ||
+                ch == '1' ||
+                ch == '2' ||
+                ch == '3' ||
+                ch == '4' ||
+                ch == '5' ||
+                ch == '6' ||
+                ch == '7' ||
+                ch == '8' ||
+                ch == '9'
+            )
+            {
+                isNumStarted = true;
+
+                if (isNegative)
+                    checked
+                    {
+                        try
+                        {
+                            result = result * 10 - (int)char.GetNumericValue(ch);
+                        }
+                        catch (OverflowException)
+                        {
+                            return int.MinValue;
+                        }
+                    }
+                else
+                    checked
+                    {
+                        try
+                        {
+                            result = result * 10 + (int)char.GetNumericValue(ch);
+                        }
+                        catch (OverflowException)
+                        {
+                            return int.MaxValue;
+                        }
+                    }
+            }
             else
                 break;
+        }
 
-        number /= ten;
-
-        if (isNumberNegative)
-            number *= -1;
-
-        if (number > Int32.MaxValue)
-            return Int32.MaxValue;
-        else if (number < Int32.MinValue)
-            return Int32.MinValue;
-        else
-            return (int)number;
+        return result;
     }
 }
