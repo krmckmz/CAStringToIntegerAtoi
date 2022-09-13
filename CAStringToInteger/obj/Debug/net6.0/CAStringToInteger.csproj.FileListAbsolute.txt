@@ -1,0 +1,15 @@
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\bin\Debug\net6.0\CAStringToInteger.exe
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\bin\Debug\net6.0\CAStringToInteger.deps.json
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\bin\Debug\net6.0\CAStringToInteger.runtimeconfig.json
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\bin\Debug\net6.0\CAStringToInteger.dll
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\bin\Debug\net6.0\CAStringToInteger.pdb
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.csproj.AssemblyReference.cache
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.AssemblyInfoInputs.cache
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.AssemblyInfo.cs
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.csproj.CoreCompileInputs.cache
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.dll
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\refint\CAStringToInteger.dll
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.pdb
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\CAStringToInteger.genruntimeconfig.cache
+C:\Users\cagda\Desktop\CAStringToIntegerAtoi\CAStringToInteger\obj\Debug\net6.0\ref\CAStringToInteger.dll
