@@ -5,7 +5,7 @@ class Program
 {
     static public void Main(string[] args)
     {
-        string text = "2147483646";
+        string text = "  +_21ab4748.3646";
         int result = MyAtoi(text);
         Console.WriteLine(result);
         Console.Read();
